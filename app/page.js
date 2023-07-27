@@ -3,8 +3,7 @@ import ScrollProgress from "@/app/components/ScrollProgress";
 export default function Home() {
 
   return (
-    <main>
-     Lets start our portfolio
+    <main style={{height: '100vh'}}>
         <ScrollProgress/>
     </main>
   )
