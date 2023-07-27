@@ -1,0 +1,27 @@
+$content-width: (
+        "mobile": 100%,
+        "tablet": 80%,
+        "desktop": 50%,
+);
+
+$font-sizes: (
+        "20": 2rem,
+        "18": 1.8rem,
+        "16": 1.6rem,
+        "14": 1.4rem,
+        "13": 1.3rem,
+        "12": 1.2rem,
+        "11": 1.1rem,
+        "10": 1rem,
+        "9": 0.9rem,
+        "8": 0.8rem
+);
+
+@mixin font-family($weight, $style) {
+  font-family: "sofia-pro", sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+//font-weight: 400 or 700;
+//font-style: normal or italic;

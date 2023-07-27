@@ -1,0 +1,91 @@
+@import "variables";
+@import "typography";
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //transition: all 0.2s ease-out;
+    //touch-action: manipulation;
+}
+
+#__next {
+    width: 100%;
+    font-size: map-get($font-sizes, "14");
+}
+
+html {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 62.5%;
+    @include font-family(400, normal);
+    background-color: $white-primary-background;
+    user-select: none;
+    touch-action: pan-x pan-y;
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: 100%;
+    -ms-touch-action: pan-x pan-y;
+    -ms-content-zooming: none;
+    -ms-user-select: none;
+    max-height: 100%;
+    max-width: 100%;
+    zoom: 1;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+ol, ul, menu {
+    list-style: none;
+}
+
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input, textarea {
+    -webkit-user-select: auto;
+}
+
+textarea {
+    white-space: revert;
+}
+
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+button {
+    outline: none;
+}
+
+::marker {
+    content: initial;
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}

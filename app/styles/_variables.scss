@@ -1,0 +1,29 @@
+$white-primary-container: #FFFFFF;
+$white-primary-background: #F9FCFF;
+$blue-light: rgba(98, 226, 255, 0.5);
+$blue-main: rgb(52, 146, 247);
+$blue-header-font: #4A81F4;
+$green-online: #9ACD4E;
+$green-button: #85BB65;
+$green-add-button: #00C478;
+$green-add-button-border: #00A665;
+$gray-input-background: #eee6e7;
+$gray-secondary-text: #C9C5CA;
+$gray-placeholder: #99999D;
+$purple-light-border: #D5DCFF;
+$gray-modal-background: rgba(112, 112, 112, 0.5);
+$black-primary-primary: #1C1B1F;
+$red-reject: #FF5451;
+$orange-primary: #FFBF55;
+
+$shadow-blue: rgba(96, 195, 255, 0.5);
+$shadow-blue-modal-button: rgba(105, 132, 255, 0.5);
+$shadow-blue-post: rgba(55, 162, 255, 0.15);
+$shadow-red: rgba(255, 103, 103, 0.5);
+$shadow-gray-header: rgba(67, 100, 247, 0.15);
+$shadow-black-footer: rgba(0, 0, 0, 0.15);
+
+$white-svg-filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(11%) hue-rotate(61deg) brightness(103%) contrast(101%);
+$main-blue-svg-filter: brightness(0) saturate(100%) invert(46%) sepia(74%) saturate(2106%) hue-rotate(192deg) brightness(101%) contrast(94%);
+$light-grey-svg-filter:  brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(108%) hue-rotate(163deg) brightness(83%) contrast(86%);
+$light-red-svg-filter:  brightness(0) saturate(100%) invert(39%) sepia(86%) saturate(3077%) hue-rotate(339deg) brightness(98%) contrast(104%);
