@@ -1,9 +1,9 @@
-import ScrollProgress from "@/app/components/ScrollProgress";
+import ScrollProgress from "@/app/components/ScrollIncrementer";
 
 export default function Home() {
 
   return (
-    <main style={{height: '100vh'}}>
+    <main>
         <ScrollProgress/>
     </main>
   )

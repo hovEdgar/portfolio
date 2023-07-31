@@ -1,5 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import styles from './ScrollIncrementer.module.scss';
+import {placeZerosAtStart} from "@/app/utils/helpers";
 
 const ScrollIncrementer = () => {
 	const [number, setNumber] = useState(0);
@@ -8,7 +10,7 @@ const ScrollIncrementer = () => {
 		// Check the scrolling direction
 		const scrollingDown = event.deltaY > 0;
 		// Increase or decrease the number based on the scrolling direction
-		const increment = scrollingDown ? 1 : -1;
+		const increment = scrollingDown ? 2 : -2; // change number in order to make progress slower or faster
 		setNumber((prevNumber) => {
 			const newNumber = prevNumber + increment;
 			// Ensure the number is between 0 and 100
@@ -27,10 +29,10 @@ const ScrollIncrementer = () => {
 	}, []);
 
 	return (
-		<div style={{background: 'orange', height: '100%'}}>
-			{/* Your non-scrollable component content here */}
+		<div className={styles.container}>
+			{/* Non-scrollable component content here */}
 			<h1>Scroll to increase/decrease the number</h1>
-			<p>{Math.round(number)}</p>
+			<p className={styles.progress}>{placeZerosAtStart(number)}{Math.round(number)}%</p>
 		</div>
 	);
 };
