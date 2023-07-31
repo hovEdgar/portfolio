@@ -32,7 +32,12 @@ const ScrollIncrementer = () => {
 		<div className={styles.container}>
 			{/* Non-scrollable component content here */}
 			<h1>Scroll to increase/decrease the number</h1>
-			<p className={styles.progress}>{placeZerosAtStart(number)}{Math.round(number)}%</p>
+			<p
+				className={styles.progress}
+				style={{ clipPath: `inset(0 ${100 - number}% 0 0)` }}
+			>
+				{placeZerosAtStart(number)}{Math.round(number)}%
+			</p>
 		</div>
 	);
 };
