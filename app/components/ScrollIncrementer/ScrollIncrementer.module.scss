@@ -1,16 +1,21 @@
 @use "../../styles" as *;
 
 .container {
+    position: relative;
     height: 100%;
     background: $primary-main;
 }
 
 .progress {
-    font-size: 4rem;
-    background: transparent;
+    font-size: 12rem;
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 20px;
-    background: linear-gradient(90deg, orange, transparent); //todo need to be changed
-    background-size: 200% 100%;
+    color: #fff;
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+    //-webkit-text-stroke-width: 2px;
+    //background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, white 50%, rgba(128, 128, 128, 1) 50%);
 }

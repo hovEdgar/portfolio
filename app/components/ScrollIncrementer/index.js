@@ -27,14 +27,14 @@ const ScrollIncrementer = () => {
 			window.removeEventListener('wheel', handleScroll);
 		};
 	}, []);
-
+	//style={{ clipPath: `inset(0 ${100 - number}% 0 0)` }}
 	return (
 		<div className={styles.container}>
 			{/* Non-scrollable component content here */}
 			<h1>Scroll to increase/decrease the number</h1>
 			<p
 				className={styles.progress}
-				style={{ clipPath: `inset(0 ${100 - number}% 0 0)` }}
+				// style={{background: `-WebkitLinearGradient(rgb(188, 12, 241), rgb(212, 4, 4))`}}
 			>
 				{placeZerosAtStart(number)}{Math.round(number)}%
 			</p>
