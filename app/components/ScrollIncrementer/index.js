@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './ScrollIncrementer.module.scss';
 import {placeZerosAtStart} from "@/app/utils/helpers";
 
@@ -14,6 +14,7 @@ const ScrollIncrementer = () => {
 		setNumber((prevNumber) => {
 			const newNumber = prevNumber + increment;
 			// Ensure the number is between 0 and 100
+			console.log(`:::Math.min(100, Math.max(0, newNumber)):::`, Math.min(100, Math.max(0, newNumber)))
 			return Math.min(100, Math.max(0, newNumber));
 		});
 	};
@@ -27,13 +28,20 @@ const ScrollIncrementer = () => {
 			window.removeEventListener('wheel', handleScroll);
 		};
 	}, []);
-	//style={{ clipPath: `inset(0 ${100 - number}% 0 0)` }}
+
+	const progressStyles = {
+		background: `-webkit-linear-gradient(0deg, rgba(255,255,255,0) ${number}%, rgba(59,183,126,1) ${100 - number}%)`,
+		'-webkit-background-clip': 'text',
+		'-webkit-text-fill-color': 'transparent'
+	}
+
 	return (
 		<div className={styles.container}>
 			{/* Non-scrollable component content here */}
 			<h1>Scroll to increase/decrease the number</h1>
 			<p
 				className={styles.progress}
+				style={progressStyles}
 				// style={{background: `-WebkitLinearGradient(rgb(188, 12, 241), rgb(212, 4, 4))`}}
 			>
 				{placeZerosAtStart(number)}{Math.round(number)}%

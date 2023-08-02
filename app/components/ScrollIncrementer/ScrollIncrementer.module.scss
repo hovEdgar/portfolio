@@ -13,9 +13,8 @@
     color: #fff;
     //-webkit-background-clip: text;
     //-webkit-text-fill-color: transparent;
-    //-webkit-text-stroke-width: 2px;
-    //background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+    -webkit-text-stroke-width: 2px;
+    //background: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 51%, rgba(59,183,126,1) 51%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background: linear-gradient(to right, white 50%, rgba(128, 128, 128, 1) 50%);
 }
