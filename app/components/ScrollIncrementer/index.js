@@ -14,7 +14,6 @@ const ScrollIncrementer = () => {
 		setNumber((prevNumber) => {
 			const newNumber = prevNumber + increment;
 			// Ensure the number is between 0 and 100
-			console.log(`:::Math.min(100, Math.max(0, newNumber)):::`, Math.min(100, Math.max(0, newNumber)))
 			return Math.min(100, Math.max(0, newNumber));
 		});
 	};
@@ -30,9 +29,11 @@ const ScrollIncrementer = () => {
 	}, []);
 
 	const progressStyles = {
-		background: `-webkit-linear-gradient(0deg, rgba(255,255,255,0) ${number}%, rgba(59,183,126,1) ${100 - number}%)`,
+		background: `-webkit-linear-gradient(0deg, rgba(255,255,255,0) ${100 - number}%, rgba(59,183,126,1) ${number}%)`,
 		'-webkit-background-clip': 'text',
-		'-webkit-text-fill-color': 'transparent'
+		'-moz-background-clip': 'text',
+		'-webkit-text-fill-color': 'transparent',
+		'-moz-text-fill-color': 'transparent'
 	}
 
 	return (

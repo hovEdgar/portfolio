@@ -8,8 +8,9 @@
 
 .progress {
     font-size: 12rem;
-    font-family: 'Gasoek One', sans-serif;
-font-weight: 700;
+    font-family: "Gajraj One", sans-serif;
+    //font-family: 'Gajraj One', sans-serif;
+    font-weight: 1000;
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
@@ -17,6 +18,20 @@ font-weight: 700;
     //-webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     //background: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 51%, rgba(59,183,126,1) 51%);
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    //-moz-background-clip: text;
+    //-moz-text-fill-color: transparent;
+
+    &:before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background: orange;
+    }
+
 }
