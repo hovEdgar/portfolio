@@ -28,28 +28,23 @@ const ScrollIncrementer = () => {
 		};
 	}, []);
 
-	const progressStyles = {
-		background: `-webkit-linear-gradient(0deg, rgba(255,255,255,0) ${100 - number}%, rgba(59,183,126,1) ${number}%)`,
-		'-webkit-background-clip': 'text',
-		'-moz-background-clip': 'text',
-		'-webkit-text-fill-color': 'transparent',
-		'-moz-text-fill-color': 'transparent'
-	}
-
 	return (
 		<div className={styles.container}>
 			{/* Non-scrollable component content here */}
-			<h1>Scroll to increase/decrease the number</h1>
-			<p
-				className={styles.progress}
-				style={progressStyles}
-				// style={{background: `-WebkitLinearGradient(rgb(188, 12, 241), rgb(212, 4, 4))`}}
-			>
-				{placeZerosAtStart(number)}{Math.round(number)}%
-			</p>
+			<h3>Scroll to increase/decrease the number</h3>
+			<svg width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+				{/* Create a linear gradient */}
+				<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+					<stop offset={`${number}%`} stopColor="white" />
+					<stop offset={`${number}%`} stopColor="#647275" />
+				</linearGradient>
+				{/* Use the gradient as a mask for the text */}
+				<text stroke="white" strokeWidth="2" x="20px" y="50%" dy=".3em" fontSize="120" fontWeight="bold" fill="url(#gradient)">
+					{placeZerosAtStart(number)}{Math.round(number)}%
+				</text>
+			</svg>
 		</div>
 	);
 };
 
 export default ScrollIncrementer;
-

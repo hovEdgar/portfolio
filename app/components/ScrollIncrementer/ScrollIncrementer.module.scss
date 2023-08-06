@@ -2,36 +2,25 @@
 
 .container {
     position: relative;
-    height: 100%;
-    background: $primary-main;
+    height: 100vh;
+    background: $primary-dark;
 }
 
 .progress {
-    font-size: 12rem;
+    //font-size: 12rem;
     font-family: "Gajraj One", sans-serif;
     //font-family: 'Gajraj One', sans-serif;
-    font-weight: 1000;
-    display: inline-block;
-    padding: 10px 20px;
+    //text-align: left;
+    //font-weight: 1000;
+    //display: inline-block;
+    //padding: 10px 20px;
     color: #fff;
     //-webkit-background-clip: text;
     //-webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 5px;
     //background: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 51%, rgba(59,183,126,1) 51%);
     //-webkit-background-clip: text;
     //-webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    //-moz-background-clip: text;
-    //-moz-text-fill-color: transparent;
-
-    &:before {
-        content: "";
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        background: orange;
-    }
-
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
 }
