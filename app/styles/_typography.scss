@@ -16,12 +16,3 @@ $font-sizes: (
         "9": 0.9rem,
         "8": 0.8rem
 );
-
-@mixin font-family($weight, $style) {
-  font-family: "sofia-pro", sans-serif;
-  font-weight: $weight;
-  font-style: $style;
-}
-
-//font-weight: 400 or 700;
-//font-style: normal or italic;

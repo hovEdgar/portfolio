@@ -5,7 +5,6 @@ import {placeZerosAtStart} from "@/app/utils/helpers";
 
 const ScrollIncrementer = () => {
 	const [number, setNumber] = useState(0);
-	const aspectRatio = 16 / 9;
 
 	const handleScroll = (event) => {
 		// Check the scrolling direction

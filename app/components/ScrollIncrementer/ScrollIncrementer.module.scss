@@ -4,7 +4,7 @@
     position: relative;
     height: 100vh;
     background: $primary-dark;
-    font-family: "Gajraj One", sans-serif;
+    font-family: DrukCond, sans-serif;
 
     .gritting {
         padding: 2rem;
@@ -13,12 +13,10 @@
     }
 
     svg text {
-        top: 100px;
-        font-size: 12rem;
-    }
+        font-size: 15rem;
+        border-bottom: 5px solid orange;
 
-    @media screen and (max-width: 800px) {
-        svg text {
+        @media screen and (max-width: 800px) {
             font-size: 6rem;
         }
     }
@@ -27,6 +25,7 @@
 
 // example how to style text with stroke and linear gradient
 .add-stroke {
+    font-family: druk cound;
     //color: #fff;
     //-webkit-text-stroke-width: 5px;
     //background: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 51%, rgba(59,183,126,1) 51%);
