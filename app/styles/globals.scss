@@ -1,13 +1,6 @@
 @import "variables";
 @import "typography";
 
-@font-face {
-    font-family: 'DrukCond';
-    src: url('../fonts/DrukCond.woff.ttf') format('woff2'); /* Update path as needed */
-    font-weight: normal;
-    font-style: normal;
-}
-
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
     all: unset;
     display: revert;
