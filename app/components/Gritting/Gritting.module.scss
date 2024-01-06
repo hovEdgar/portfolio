@@ -1,0 +1,51 @@
+@use 'app/styles' as *;
+
+.top {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: orange;
+
+    &[aria-expanded=true] {
+        animation: curtainTop 1s ease-in-out forwards;
+    }
+}
+
+.bottom {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    background: blue;
+
+    &[aria-expanded=true] {
+        animation: curtainBottom 1s ease-in-out forwards;
+    }
+}
+
+@keyframes curtainTop {
+    from {
+        top: 0
+    }
+
+    to {
+        top: -100%;
+        display: none;
+    }
+}
+
+@keyframes curtainBottom {
+    from {
+        bottom: 0
+    }
+
+    to {
+        bottom: -100%;
+        display: none;
+    }
+}

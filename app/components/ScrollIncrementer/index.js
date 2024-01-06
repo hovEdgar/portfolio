@@ -1,7 +1,7 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
+import { placeZerosAtStart } from "@/app/utils/helpers";
 import styles from './ScrollIncrementer.module.scss';
-import {placeZerosAtStart} from "@/app/utils/helpers";
 
 const ScrollIncrementer = () => {
 	const [number, setNumber] = useState(0);
