@@ -6,5 +6,5 @@ export default function Home() {
     <main>
         <ScrollProgress/>
     </main>
-  )
+  );
 }
