@@ -1,12 +1,12 @@
-import ScrollProgress from "@/app/components/ScrollIncrementer";
 import Gritting from "@/app/components/Gritting";
+import HomePage from "@/app/components/Home";
 
 export default function Home() {
 
   return (
     <main>
-        <ScrollProgress />
         <Gritting />
+        <HomePage />
     </main>
   );
 }

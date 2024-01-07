@@ -1,20 +1,21 @@
 'use client'
 import React, { useState } from "react";
 import styles from './Gritting.module.scss';
+import ScrollProgress from "@/app/components/ScrollIncrementer";
+import {useSelector} from "react-redux";
+import {selectGlobalState} from "@/app/redux/globalSlice";
+import DynamicCentralBorder from "@/app/components/DynamicCentralBorder";
 
 function Gritting() {
-	const [start, setStart] = useState(false);
-
-	function startHandler() {
-		setStart(true)
-	}
+	const { loader } = useSelector(selectGlobalState);
 
 	return (
 		<>
-			<div className={styles.top} aria-expanded={start}>
-				<button onClick={startHandler}>Start</button>
+			<div className={styles.top} aria-expanded={+loader === 100}>
+				<ScrollProgress />
 			</div>
-			<div className={styles.bottom} aria-expanded={start} />
+			<DynamicCentralBorder />
+			<div className={styles.bottom} aria-expanded={+loader === 100} />
 		</>
 	);
 }

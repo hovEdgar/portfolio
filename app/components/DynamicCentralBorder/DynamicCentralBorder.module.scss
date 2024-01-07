@@ -1,0 +1,15 @@
+@use 'app/styles' as *;
+
+.delimiter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5vh;
+    background: $primary-dark;
+    z-index: 3;
+
+    &[aria-expanded=true] {
+        display: none;
+    }
+}

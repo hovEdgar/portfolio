@@ -3,11 +3,11 @@
 .top {
     display: block;
     width: 100vw;
-    height: 50vh;
+    height: 48dvh;
     position: fixed;
     top: 0;
     z-index: 2;
-    background: orange;
+    background: $primary-dark;
 
     &[aria-expanded=true] {
         animation: curtainTop 1s ease-in-out forwards;
@@ -17,11 +17,11 @@
 .bottom {
     display: block;
     width: 100vw;
-    height: 50vh;
+    height: 48dvh;
     position: fixed;
     bottom: 0;
     z-index: 2;
-    background: blue;
+    background: $primary-dark;
 
     &[aria-expanded=true] {
         animation: curtainBottom 1s ease-in-out forwards;
