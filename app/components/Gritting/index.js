@@ -5,6 +5,7 @@ import ScrollProgress from "@/app/components/ScrollIncrementer";
 import {useSelector} from "react-redux";
 import {selectGlobalState} from "@/app/redux/globalSlice";
 import DynamicCentralBorder from "@/app/components/DynamicCentralBorder";
+import AllRightsReserved from "@/app/components/AllRightsReserved";
 
 function Gritting() {
 	const { loader } = useSelector(selectGlobalState);
@@ -15,7 +16,9 @@ function Gritting() {
 				<ScrollProgress />
 			</div>
 			<DynamicCentralBorder />
-			<div className={styles.bottom} aria-expanded={+loader === 100} />
+			<div className={styles.bottom} aria-expanded={+loader === 100}>
+				<AllRightsReserved />
+			</div>
 		</>
 	);
 }

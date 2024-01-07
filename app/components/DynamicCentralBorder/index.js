@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './DynamicCentralBorder.module.scss';
 import {useSelector} from "react-redux";
 import {selectGlobalState} from "@/app/redux/globalSlice";
+import styles from './DynamicCentralBorder.module.scss';
 
 function DynamicCentralBorder() {
 	const { loader } = useSelector(selectGlobalState);

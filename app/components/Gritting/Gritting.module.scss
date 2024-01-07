@@ -15,9 +15,10 @@
 }
 
 .bottom {
-    display: block;
     width: 100vw;
     height: 48dvh;
+    display: flex; // this style uses only for fix footer on bottom
+    flex-direction: column-reverse;
     position: fixed;
     bottom: 0;
     z-index: 2;

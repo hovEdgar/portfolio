@@ -1,0 +1,8 @@
+@use 'app/styles' as *;
+
+.footer {
+    width: 100dvw;
+    padding: .5rem;
+    text-align: right;
+    color: $primary-light;
+}
